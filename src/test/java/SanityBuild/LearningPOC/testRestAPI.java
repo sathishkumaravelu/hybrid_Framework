@@ -22,7 +22,7 @@ public class testRestAPI {
 
         response.prettyPrint();
 
-        String string = response.getBody().jsonPath().get("data["+0+"].id").toString();
+        String string = response.getBody().jsonPath().get("data.id").toString();
         Assert.assertEquals(string,"2");
 
 
