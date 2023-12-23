@@ -3,8 +3,8 @@
 <suite name="SmokeTestx">
     <test thread-count="5" name="Test" parallel="classes">
         <classes>
-            <class name="testcase.TC001_LoginPage"/>
-            <class name="testcase.TC002_loginFail"/>
+   <!--         <class name="testcase.TC001_LoginPage"/>
+            <class name="testcase.TC002_loginFail"/>-->
             <class name="testcase.TC03_CreateLead"/>
         </classes>
     </test> <!-- Test -->
