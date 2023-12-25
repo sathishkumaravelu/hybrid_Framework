@@ -44,7 +44,10 @@ public class BrowserMethodsImp extends Reporter implements IBrowserMethods  {
             case "chrome":
                //git stat: WebDriverManager.chromedriver().setup();
                 ChromeOptions opt = new ChromeOptions();
+                opt.addArguments("--no-sandbox");
                 opt.addArguments("--disable-dev-shm-usage");
+                opt.addArguments("--disable-notifications");
+                opt.addArguments("--headless");
                 remoteWebdriver.set(new ChromeDriver(opt));
                 break;
             case "firefox":
