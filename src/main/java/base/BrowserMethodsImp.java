@@ -41,7 +41,7 @@ public class BrowserMethodsImp extends Reporter implements IBrowserMethods  {
     public void setDriver(String browser) throws MalformedURLException {
         switch (browser) {
             case "chrome":
-                WebDriverManager.chromedriver().setup();
+               //git stat: WebDriverManager.chromedriver().setup();
                 remoteWebdriver.set(new ChromeDriver());
                 break;
             case "firefox":
