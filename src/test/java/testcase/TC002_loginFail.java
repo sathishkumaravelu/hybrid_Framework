@@ -15,7 +15,7 @@ public class TC002_loginFail extends BaseClass {
         testAuthor="Sathish";
         testCategory ="Smoke";
     }
-    @Test
+    @Test(priority = 99999)
     public void testLoginPage(){
         String userName ="demosalesmanager";
         String password ="crmsfa";

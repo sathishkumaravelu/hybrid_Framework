@@ -15,7 +15,7 @@ public class DataProviderAPI {
         try {
             response = RestAssured.given().get("https://random-data-api.com/api/v2/users?size=1&response_type=json");
             int statusCode = response.statusCode();
-            if(statusCode == 300)
+            if(statusCode == 200)
                 apiStatus = true;
             else
                 apiStatus=false;

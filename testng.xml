@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="SmokeTest">
+    <listeners>
+        <listener class-name="utils.CommonRetryAnalyzer"></listener>
+    </listeners>
     <test thread-count="5" name="Test">
         <classes>
             <class name="testcase.TC001_LoginPage"/>
@@ -8,4 +11,5 @@
             <class name="testcase.TC03_CreateLead"/>
         </classes>
     </test> <!-- Test -->
+
 </suite> <!-- Suite -->
