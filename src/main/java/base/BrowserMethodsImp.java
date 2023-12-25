@@ -3,6 +3,7 @@ package base;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -42,7 +43,9 @@ public class BrowserMethodsImp extends Reporter implements IBrowserMethods  {
         switch (browser) {
             case "chrome":
                //git stat: WebDriverManager.chromedriver().setup();
-                remoteWebdriver.set(new ChromeDriver());
+                ChromeOptions opt = new ChromeOptions();
+                opt.addArguments("--disable-dev-shm-usage");
+                remoteWebdriver.set(new ChromeDriver(opt));
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
